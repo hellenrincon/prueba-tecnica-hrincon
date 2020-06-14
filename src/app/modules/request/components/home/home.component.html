@@ -1,0 +1,27 @@
+<div class="app-home">
+  <ngb-carousel *ngIf="carrosusels">
+    <ng-template ngbSlide *ngFor="let item of carrosusels; index as i;">
+      <div class="picsum-img-wrapper">
+        <img [src]="item.imgUrl" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{item.h}}</h3>
+        <p>{{item.text}}</p><a href="/steppers-request/steppers/quantity">{{'TEXT_BTN_CREDIT' | translate}}</a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <div class="row content-request-click">
+    <div class="col-8">
+      <div class="content-tex">
+        <h3>{{'TITLE_CREDIT'  | translate}}</h3>
+        <div>
+          {{'TEXT_CREDIT' | translate}}
+        </div>
+        <button type="button" (click)="navigate('/steppers-request/steppers/quantity')" class="btn btn-primary btn-lg btn-block">{{'TEXT_BTN_CREDIT' | translate}}</button>
+      </div>
+    </div>
+    <div class="col-4">
+      <img class="img-travel" src="./../../../../../assets/img/bg-viajes.jpg" alt="">
+    </div>
+  </div>
+</div>

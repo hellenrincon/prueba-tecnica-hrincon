@@ -1,0 +1,70 @@
+<div class="main-register">
+    <div class="col-12 text-center">
+        <h2>Registrarse</h2>
+        <div class="card"> 
+            <div class="card-body text-left">
+                <div class="register-form">
+                    <div *ngIf="errorMsn" class="alert alert-danger">
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> {{errorMsn}}
+                    </div>
+                    <form [formGroup]="registerForm">
+                        <div class="form-group">
+                            <label>Numero identificación: </label>
+                            <input type="number" min="1000000" class="form-control" placeholder="Número Identificación"
+                                formControlName="id">
+                        </div>
+                        <div *ngIf="registerForm.controls.id.invalid && (registerForm.controls.id.dirty || registerForm.controls.id.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="registerForm.controls.id.errors.required">
+                                {{'TEXT_ERROR_PASSWORD_REQUIRED' | translate}}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombres: </label>
+                            <input type="text" minlength="5" class="form-control" placeholder="Nombres Completos"
+                                formControlName="name">
+                        </div>
+                        <div *ngIf="registerForm.controls.name.invalid && (registerForm.controls.name.dirty || registerForm.controls.name.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="registerForm.controls.name.errors.required">
+                                {{'TEXT_ERROR_name_REQUIRED' | translate}}
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>{{'LABEL_EMAIL' | translate}}</label>
+                            <input type="email" class="form-control" formControlName="email"
+                                placeholder="Correo Electronico">
+                        </div>
+                        <div *ngIf="registerForm.controls.email.invalid && (registerForm.controls.email.dirty || registerForm.controls.email.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="registerForm.controls.email.errors.required">
+                                {{'TEXT_ERROR_EMAIL_REQUIRED' | translate}}
+                            </div>
+                            <div *ngIf="registerForm.controls.email.errors.email">
+                                {{'TEXT_ERROR_EMAIL' | translate}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>{{'LABEL_PASSWORD' | translate}}</label>
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Password">
+                        </div>
+                        <div *ngIf="registerForm.controls.password.invalid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="registerForm.controls.password.errors.required">
+                                {{'TEXT_ERROR_PASSWORD_REQUIRED' | translate}}
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" [disabled]="registerForm.valid?false:true"
+                            (click)="sendRegister()">Register</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigate('/log-in')">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

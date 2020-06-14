@@ -1,0 +1,44 @@
+<h3><strong>{{name | titlecase}}</strong> este es el reporte de usuarios general</h3>
+
+<div style="margin-bottom: 1em">
+    <button type="button" pButton icon="pi pi-chevron-left" (click)="prev()" style="margin-right:.5em"
+        [disabled]="isFirstPage()">
+        <span class="material-icons">
+            chevron_left
+        </span>
+    </button>
+    <button type="button" pButton icon="pi pi-refresh" (click)="reset()" style="margin-right:.5em">
+        <span class="material-icons">
+            refresh
+        </span>
+    </button>
+    <button type="button" pButton icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()">
+        <span class="material-icons">
+            chevron_right
+        </span>
+    </button>
+</div>
+<p-table [columns]="cols" [value]="historyUsers" selectionMode="single" (onRowSelect)="onRowSelect($event)"
+    [(selection)]="obj" dataKey="id">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Activa el orden" ariaLabelDesc="Activa el orden descendente"
+                    ariaLabelAsc="Activa el orden ascendente"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="selectabledT?rowData:null">
+            <td *ngFor="let col of columns">
+                <div *ngIf="col.field=='active'; else other" class="text-center">
+                    {{rowData.active==true?'Activo':'In Activo'}}
+                </div>
+                <ng-template #other>
+                    {{rowData[col.field]}}
+                </ng-template>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

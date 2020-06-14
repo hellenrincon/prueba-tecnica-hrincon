@@ -1,0 +1,242 @@
+{
+  "credit": [
+    {
+      "id": 1,
+      "title": "Libre Inversion",
+      "min": 150000,
+      "max": 1000000
+    }
+  ],
+  "users": [
+    {
+      "id": 1070951664,
+      "name": "oscar",
+      "email": "o@o.com",
+      "password": "123",
+      "active": true
+    },
+    {
+      "id": 101911692,
+      "name": "Hellen RIncon",
+      "email": "h@h.com",
+      "password": "123",
+      "active": true
+    },
+    {
+      "id": 1023123,
+      "name": "maria",
+      "email": "m@m.com",
+      "password": "12345",
+      "active": true
+    },
+    {
+      "id": 1234,
+      "name": "qwerr",
+      "email": "q@q.com",
+      "password": "asdf",
+      "active": true
+    }
+  ],
+  "carrousel": [
+    {
+      "id": 0,
+      "h": "¿Son tus sueños?",
+      "text": "Con nuestro credito te ayudamos para que lo hagas realidad.",
+      "imgUrl": "https://picsum.photos/id/944/900/500"
+    },
+    {
+      "id": 1,
+      "h": "¿Lo dudas?",
+      "text": "No hay temores, siempre estaremos para ayudarte.",
+      "imgUrl": "https://picsum.photos/id/1011/900/500"
+    },
+    {
+      "id": 2,
+      "h": "¿quieres viajar?",
+      "text": "No limites tu viaje, con nuestros creditos puedes lograrlo.",
+      "imgUrl": "https://picsum.photos/id/984/900/500"
+    }
+  ],
+  "credits": [
+    {
+      "idUser": 101911692,
+      "value": 590000,
+      "state": "APROBADO",
+      "datePay": "2020-06-25T05:00:00.000Z",
+      "dateRequeste": "2020-06-12T05:44:59.550Z",
+      "pay": true,
+      "id": "7757d240-c10f-4f13-ad25-3759c640e438"
+    },
+    {
+      "idUser": 101911692,
+      "value": 540000,
+      "state": "APROBADO",
+      "datePay": "2020-06-16T05:00:00.000Z",
+      "dateRequeste": "2020-06-12T05:46:23.412Z",
+      "pay": true,
+      "id": "eb9e2b9d-40dd-4b29-991c-a943954ffa44"
+    },
+    {
+      "idUser": 1023123,
+      "value": 520000,
+      "state": "RECHAZADO",
+      "datePay": "2020-06-18T05:00:00.000Z",
+      "dateRequeste": "2020-06-13T21:09:20.569Z",
+      "pay": true,
+      "id": "676a5a1e-7a3a-4197-855e-8c0c15c88b58"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 580000,
+      "state": "APROBADO",
+      "datePay": "2020-06-18T05:00:00.000Z",
+      "dateRequeste": "2020-06-13T21:13:17.806Z",
+      "pay": true,
+      "id": "a9e30bbe-a040-4bc9-ad74-01709467f004"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 570000,
+      "state": "APROBADO",
+      "datePay": "2020-06-19T05:00:00.000Z",
+      "dateRequeste": "2020-06-13T23:58:48.182Z",
+      "pay": true,
+      "id": "f90c2db8-b03a-4dc1-8595-e36dc151f546"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 660000,
+      "state": "RECHAZADO",
+      "datePay": "2020-06-26T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:00:29.367Z",
+      "pay": true,
+      "id": "7c67f09e-ec48-4869-9348-60bec23a7bcb"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 570000,
+      "state": "APROBADO",
+      "datePay": "2020-06-18T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:06:46.625Z",
+      "pay": true,
+      "id": "c42646f4-b23c-4a36-9fe7-0c9a2622dafd"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 730000,
+      "state": "APROBADO",
+      "datePay": "2020-06-26T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:09:39.649Z",
+      "pay": true,
+      "id": "4cd22fd5-6b2e-4257-9b70-5be204bcab77"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 590000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T00:17:04.015Z",
+      "pay": true,
+      "id": "44edd14d-4daa-4e42-9ffe-fcb968b9323f"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 680000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T00:18:51.071Z",
+      "pay": true,
+      "id": "7fb8b9d3-8ab3-4c3d-80f0-b95296f1f7f5"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 550000,
+      "state": "APROBADO",
+      "datePay": "2020-06-26T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:20:52.908Z",
+      "pay": true,
+      "id": "53cba44e-9bf0-42f3-8b3b-78118f20a87d"
+    },
+    {
+      "idUser": 1234,
+      "value": 500000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T00:24:21.523Z",
+      "pay": true,
+      "id": "7a55d5c6-e95b-4c8e-a60b-d3478cf12565"
+    },
+    {
+      "idUser": 1234,
+      "value": 540000,
+      "state": "APROBADO",
+      "datePay": "2020-06-25T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:51:53.755Z",
+      "pay": true,
+      "id": "82866a03-941c-4b6a-bf5e-3c52288927ed"
+    },
+    {
+      "idUser": 1234,
+      "value": 930000,
+      "state": "APROBADO",
+      "datePay": "2020-06-22T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T00:52:30.834Z",
+      "pay": true,
+      "id": "03c056d4-ee41-4521-99f1-0a5b77b89d2f"
+    },
+    {
+      "idUser": 1234,
+      "value": 620000,
+      "state": "RECHAZADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T00:59:34.786Z",
+      "pay": true,
+      "id": "3531bb07-4ceb-406a-832f-ec38101b26f0"
+    },
+    {
+      "idUser": 1234,
+      "value": 560000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T01:00:54.283Z",
+      "pay": true,
+      "id": "8cae30d0-47b2-402a-825e-c4aac5c8b421"
+    },
+    {
+      "idUser": 1234,
+      "value": 600000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T01:02:16.373Z",
+      "pay": true,
+      "id": "14b06dec-e856-4530-a5ce-ae1329a337b6"
+    },
+    {
+      "idUser": 1234,
+      "value": 930000,
+      "state": "RECHAZADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T01:04:43.060Z",
+      "pay": true,
+      "id": "b8722854-44d9-4624-a3ea-1c89743454a9"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 810000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T01:08:11.999Z",
+      "pay": true,
+      "id": "45a3c8c0-32e9-4646-a245-70892f039172"
+    },
+    {
+      "idUser": 1070951664,
+      "value": 530000,
+      "state": "APROBADO",
+      "datePay": "",
+      "dateRequeste": "2020-06-14T01:11:29.389Z",
+      "pay": true,
+      "id": "d521e9a2-0298-4d9e-8bd3-dbaa22cac83b"
+    }
+  ]
+}

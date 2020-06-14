@@ -1,0 +1,60 @@
+@import "./../../../../../assets/styles/variables.scss";
+
+#nav-header {
+    background: $color-primary;
+}
+
+#head-title {
+    margin: auto;
+    font-size: 2vw;
+    color: ghostwhite;
+}
+
+.box {
+    .header {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        min-height: 30px;
+        background-color: #efefef;
+        .text-right {
+            text-align: right;
+        }
+    }
+    .body {
+        min-height: 70px;
+        border-bottom: 1px solid #efefef;
+        .titulo {
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .box {
+        .text-right {
+            text-align: left !important;
+        }
+        .body {
+            .logo,
+            .titulo {
+                text-align: center;
+            }
+        }
+        .footer {
+            .usuario {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.bd-menu {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+    border-width: 0.2rem 0 0;
+    button {
+        margin-right: 12px !important;
+    }
+}

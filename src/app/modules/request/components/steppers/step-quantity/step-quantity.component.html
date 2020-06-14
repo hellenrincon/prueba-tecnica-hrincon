@@ -1,0 +1,16 @@
+<div *ngIf="configuration">
+    <div class="row" *ngIf="valueSelected">
+        <div class="col-12 text-center">
+            <label><strong>Total Solicitado:</strong> </label> {{valueSelected|currency }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">{{configuration.minValue|currency }}</div>
+        <div class="col-6 text-center">
+            <mat-slider [min]="configuration.minValue" [max]="configuration.maxValue" [step]="configuration.step"
+                (change)="onSelectedValueCredit($event)"
+                [value]="valueStart>configuration.minValue?valueStart:configuration.minValue"></mat-slider>
+        </div>
+        <div class="col-3">{{configuration.maxValue|currency }}</div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Datos tomador</h5>
+        <form [formGroup]="userDataFormGroup">
+            <mat-form-field>
+                <mat-label>Cedula</mat-label>
+                <input [disabled]="true" matInput formControlName="id" placeholder="Número cedula" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input [disabled]="true" matInput formControlName="name" placeholder="Nombre" required>
+            </mat-form-field>
+            <div>
+                <mat-form-field>
+                    <mat-label>Correo</mat-label>
+                    <input [disabled]="true" matInput formControlName="email" placeholder="Correo" required>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Fecha probable de pago.</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="datePay" (dateChange)="addEvent($event)" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </form>
+    </div>
+</div>

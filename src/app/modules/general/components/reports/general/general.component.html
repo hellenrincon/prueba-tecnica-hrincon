@@ -1,0 +1,16 @@
+<div *ngIf="!showGrid;else title">
+    <h3>Por favor selecciona un usuario de lista para ver su historial detallado.</h3>
+</div>
+<ng-template #title>
+    <h3>Pudes hacer click en el botón regresar o <a href="javascript:void(0)" (click)="back()">aqui</a> y volver a la consulta general.</h3>
+</ng-template>
+
+<div *ngIf="!showGrid;else gidHistry">
+    <app-users [selectebled]="true" (rowSelected)="onRowSelect($event)"></app-users>
+</div>
+<ng-template #gidHistry>
+    <app-history-request [idUser]="userFind"></app-history-request>
+    <div class="btn-r-ge">
+        <button type="button" (click)="back()" class="btn btn-primary btn-lg btn-block">Regresar</button>
+    </div>
+</ng-template>

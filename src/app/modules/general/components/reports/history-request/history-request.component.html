@@ -1,0 +1,52 @@
+<h3><strong>{{name | titlecase}}</strong> este es tu historial de creditos</h3>
+
+<div style="margin-bottom: 1em">
+    <button type="button" pButton icon="pi pi-chevron-left" (click)="prev()" style="margin-right:.5em"
+        [disabled]="isFirstPage()">
+        <span class="material-icons">
+            chevron_left
+        </span>
+    </button>
+    <button type="button" pButton icon="pi pi-refresh" (click)="reset()" style="margin-right:.5em">
+        <span class="material-icons">
+            refresh
+        </span>
+    </button>
+    <button type="button" pButton icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()">
+        <span class="material-icons">
+            chevron_right
+        </span>
+    </button>
+</div>
+<p-table [columns]="cols" [value]="historyRequest">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Activa el orden" ariaLabelDesc="Activa el orden descendente"
+                    ariaLabelAsc="Activa el orden ascendente"></p-sortIcon>
+            </th>
+            <th *ngIf="idUserFind==null">
+                Pagar credito
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns" [ngClass]="rowData.state=='RECHAZADO'? 'rejected' : null">
+                <div *ngIf="col.field=='pay'; else other" class="text-center">
+                    {{rowData[col.field]==true&& rowData.state!='RECHAZADO'?'Si':rowData.state=='RECHAZADO'?'N/A':'No'}}
+                </div>
+                <ng-template #other>
+                    {{rowData[col.field]}}
+                </ng-template>
+            </td>
+            <td class="text-center" *ngIf="idUserFind==null">
+                <span class="material-icons btn-pay" *ngIf="rowData.pay==false && rowData.state!='RECHAZADO'"
+                    (click)="selectCarWithButton(rowData)">
+                    payments
+                </span>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

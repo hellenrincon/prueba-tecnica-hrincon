@@ -1,0 +1,14 @@
+{
+    "HEAD_TITLE": "Prueba técnica Hellen Rincón Creditos",
+    "TITLE_CREDIT":"Crédito de Libre Inversión",
+    "TEXT_CREDIT":"Si tienes planeado realizar compras para el hogar o viajar a Europa en tus próximas vacaciones, nosotros te ayudamos a cumplir tus sueños.",
+    "TEXT_BTN_CREDIT":"Solicitalo Aqui!",
+    "HARS":"Hellen Alejandra Rincon Soler",
+    "VERSION":"Version 1.0.0",
+    "PROJECT":"Proyecto Creditos",
+    "TEXT_ERROR_EMAIL_REQUIRED":"El campo Email es requerido.",
+    "TEXT_ERROR_EMAIL":"EL email no es valido.",
+    "TEXT_ERROR_PASSWORD_REQUIRED":"El campo password es requerido.",
+    "LABEL_PASSWORD":"Constraseña",
+    "LABEL_EMAIL":"Correo Electronico."
+}

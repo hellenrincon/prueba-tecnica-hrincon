@@ -1,0 +1,20 @@
+@media (max-width: 575.98px)  {
+    .footer{
+        text-align: center !important;
+    }
+}
+
+footer{
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #efefef;
+    background: #efefef;
+    .row{
+        .derechos{
+           text-align: center;
+        }
+        .version{
+           text-align: right;
+        }
+    }
+}

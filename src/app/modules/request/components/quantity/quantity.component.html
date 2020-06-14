@@ -1,0 +1,13 @@
+<div class="text-center">
+    <h2>Te ofrecemos creditos para lo que necesites.</h2>
+    <p>Agil, facil y en linea</p>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Calcula tu credito.</h5>
+        <app-step-quantity  [setValue]="valueSelected" (onValueSelected)="onValueSelected($event)"></app-step-quantity>
+    </div>
+</div>
+<div class="btn-q-continue">
+    <button type="button" (click)="continue()" class="btn btn-primary btn-lg btn-block">Continuar</button>
+</div>
