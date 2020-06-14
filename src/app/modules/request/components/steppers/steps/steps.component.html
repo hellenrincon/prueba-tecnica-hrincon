@@ -1,7 +1,7 @@
 <mat-vertical-stepper [linear]="true" #stepperRequest (selectionChange)="selectionChange($event)">
     <mat-step [stepControl]="requestFormGroup">
         <form [formGroup]="requestFormGroup">
-            <ng-template matStepLabel>¿Cuanto necesitas?</ng-template>
+            <ng-template matStepLabel>{{ 'TEXT_TITLE_STEPS_NEED'| translate}}</ng-template>
 
             <div>
                 <app-step-quantity (onValueSelected)="onValueSelected($event)" [setValue]="setValue">
@@ -9,31 +9,33 @@
             </div>
 
             <div>
-                <button mat-button matStepperNext color="primary">Continuar</button>
+                <button mat-button matStepperNext color="primary">{{ 'TEXT_QUANTITY_CONTINUE'| translate}}</button>
             </div>
         </form>
     </mat-step>
     <mat-step [stepControl]="userDataFormGroup">
         <form [formGroup]="userDataFormGroup">
-            <ng-template matStepLabel>Tu información personal</ng-template>
+            <ng-template matStepLabel>{{ 'TEXT_TITLE_STEPS_INFO'| translate}}</ng-template>
             <div>
                 <app-step-data-user (onDataUser)="onDataUser($event)"></app-step-data-user>
             </div>
             <div>
-                <button mat-button matStepperPrevious>Regresar</button>
-                <button mat-button matStepperNext>Continuar</button>
+                <button mat-button matStepperPrevious>{{ 'BTN_GENERAL_BACK'| translate}}</button>
+                <button mat-button matStepperNext>{{ 'TEXT_QUANTITY_CONTINUE'| translate}}</button>
             </div>
         </form>
     </mat-step>
     <mat-step>
-        <ng-template matStepLabel>Resumen</ng-template>
+        <ng-template matStepLabel>{{ 'TEXT_QUANTITY_CONTINUE'| translate}}</ng-template>
         <app-step-summary [summary]="objFinal"></app-step-summary>
         <div>
-            <button mat-button matStepperPrevious>Regresar</button>
-            <button mat-button (click)="stepperRequest.reset()">Cancelar</button>
+            <button mat-button matStepperPrevious>{{ 'BTN_GENERAL_BACK'| translate}}</button>
+            <button mat-button (click)="stepperRequest.reset()"> {{ 'TEXT_TITLE_STEPS_SUMMARY_CANCEL'| translate}}
+            </button>
         </div>
     </mat-step>
 </mat-vertical-stepper>
 <div class="btn-s-so">
-    <button type="button" (click)="sendRequestCredit()" [hidden]="btnRequestCredit" class="btn btn-primary btn-lg btn-block">Solicitar credito</button>
+    <button type="button" (click)="sendRequestCredit()" [hidden]="btnRequestCredit"
+        class="btn btn-primary btn-lg btn-block"> {{ 'TEXT_TITLE_STEPS_BTN_CREDIT'| translate}} </button>
 </div>

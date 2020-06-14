@@ -1,35 +1,35 @@
 <mat-list *ngIf="objSummary.user">
-    <div mat-subheader>Informacion de usuario</div>
+    <div mat-subheader>{{ 'TEXT_TITLE_STEP_SM_TITLE'| translate}} </div>
     <mat-list-item>
         <mat-icon mat-list-icon>confirmation_number</mat-icon>
-        <div mat-line>Numero Identificación:</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_NUM_IDENT'| translate}}</div>
         <div mat-line>{{objSummary.user.id}}</div>
     </mat-list-item>
     <mat-list-item>
         <mat-icon mat-list-icon>perm_identity</mat-icon>
-        <div mat-line>Nombre:</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_NAME'| translate}}</div>
         <div mat-line>{{objSummary.user.name}}</div>
     </mat-list-item>
     <mat-list-item>
         <mat-icon mat-list-icon>alternate_email</mat-icon>
-        <div mat-line>Correo:</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_EMAIL'| translate}}</div>
         <div mat-line>{{objSummary.user.email}}</div>
     </mat-list-item>
     <mat-divider></mat-divider>
-    <div mat-subheader>Detalle del credito</div>
+    <div mat-subheader>{{ 'TEXT_TITLE_STEP_SM_CREDIT'| translate}}</div>
     <mat-list-item>
         <mat-icon mat-list-icon>attach_money</mat-icon>
-        <div mat-line>Monto solicitud</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_REQUEST'| translate}}</div>
         <div mat-line>{{objSummary.request}}</div>
     </mat-list-item>
     <mat-list-item *ngIf="objSummary.datePay"> 
         <mat-icon mat-list-icon>date_range</mat-icon>
-        <div mat-line>Fecha probable de pago:</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_DATE'| translate}}</div>
         <div mat-line>{{objSummary.datePay | date}}</div>
     </mat-list-item>
     <mat-list-item>
         <mat-icon mat-list-icon>assistant_photo</mat-icon>
-        <div mat-line>Estado:</div>
+        <div mat-line>{{ 'TEXT_TITLE_STEP_SM_STATE'| translate}}</div>
         <div mat-line>{{objSummary.status}}</div>
     </mat-list-item>
 </mat-list>

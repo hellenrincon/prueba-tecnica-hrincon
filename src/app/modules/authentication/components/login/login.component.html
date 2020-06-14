@@ -1,6 +1,6 @@
 <div class="main-login">
     <div class="col-12 text-center">
-        <h2>Log-In</h2>
+        <h2>{{'LABEL_TITLE_LOGIN' | translate}}</h2>
         <div class="card">
             <div class="card-body text-left">
                 <div class="login-form">
@@ -34,12 +34,12 @@
                             </div>
                         </div>
                         <button type="button" [disabled]="LogInForm.valid?false:true" (click)="sendLogIn()"
-                            class="btn btn-primary">Login</button>
-                        <button type="button" class="btn btn-secondary" (click)="navigate('/create-count')">Register</button>
+                            class="btn btn-primary"> {{'LABEL_LOGIN' | translate}}</button>
+                        <button type="button" class="btn btn-secondary" (click)="navigate('/create-count')">
+                            {{'LABEL_REGISTER' | translate}}</button>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
 </div>

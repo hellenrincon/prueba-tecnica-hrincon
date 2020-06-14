@@ -17,7 +17,7 @@
     },
     {
       "id": 101911692,
-      "name": "Hellen RIncon",
+      "name": "Hellen Rincon",
       "email": "h@h.com",
       "password": "123",
       "active": true
@@ -34,6 +34,13 @@
       "name": "qwerr",
       "email": "q@q.com",
       "password": "asdf",
+      "active": true
+    },
+    {
+      "id": 1019116942,
+      "name": "Alejejandr",
+      "email": "h@c.co",
+      "password": "123",
       "active": true
     }
   ],
@@ -237,6 +244,33 @@
       "dateRequeste": "2020-06-14T01:11:29.389Z",
       "pay": true,
       "id": "d521e9a2-0298-4d9e-8bd3-dbaa22cac83b"
+    },
+    {
+      "idUser": 1019116942,
+      "value": 570000,
+      "state": "APROBADO",
+      "datePay": "2020-06-18T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T03:59:00.657Z",
+      "pay": true,
+      "id": "81549f86-609e-4316-a5bf-da72b72b6533"
+    },
+    {
+      "idUser": 1019116942,
+      "value": 500000,
+      "state": "APROBADO",
+      "datePay": "2020-06-13T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T04:10:42.471Z",
+      "pay": true,
+      "id": "a4e2a53b-b80c-4932-906c-633b74186057"
+    },
+    {
+      "idUser": 1019116942,
+      "value": 150000,
+      "state": "APROBADO",
+      "datePay": "2020-06-18T05:00:00.000Z",
+      "dateRequeste": "2020-06-14T04:11:29.838Z",
+      "pay": true,
+      "id": "68379e7e-01e8-4b96-b460-85c33e82e089"
     }
   ]
 }

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import *as actionReques from './../../../../../actions/request.action';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -37,7 +38,7 @@ export class StepQuantityComponent implements OnInit {
   }
 
   private getDataCredit() {
-    this.http.get('http://localhost:3000/credit/1').subscribe((result: any) => {
+    this.http.get(`${environment.urlApi}credit/1`).subscribe((result: any) => {
       this.configuration = {
         maxValue: result.max,
         minValue: result.min,

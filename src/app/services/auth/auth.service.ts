@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { tap, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { IUser } from 'src/app/models/iuser';
 import { LocalStorage } from '@ngx-pwa/local-storage';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class AuthService {
   public setUser(user: IUser): Promise<any> {
     user.active = true;
     return new Promise((resolve, error) => {
-      this.http.post(`http://localhost:3000/users`, user).subscribe((result: any) => {
+      this.http.post(`${environment.urlApi}users`, user).subscribe((result: any) => {
         if (result) {
           resolve({ body: result, status: 200 });
         } else {
@@ -78,7 +78,7 @@ export class AuthService {
 
   private getUserDb(user: string): Promise<IUser> {
     return new Promise((resolve, error) => {
-      this.http.get(`http://localhost:3000/users?email=${user}`).subscribe((result: any) => {
+      this.http.get(`${environment.urlApi}users?email=${user}`).subscribe((result: any) => {
         if (result.length > 0) {
           resolve(result[0]);
         } else {

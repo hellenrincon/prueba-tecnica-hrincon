@@ -1,8 +1,9 @@
 <div *ngIf="!showGrid;else title">
-    <h3>Por favor selecciona un usuario de lista para ver su historial detallado.</h3>
+    <h3>{{ 'TEXT_LIST_GENERAL' | translate}}</h3>
 </div>
 <ng-template #title>
-    <h3>Pudes hacer click en el botón regresar o <a href="javascript:void(0)" (click)="back()">aqui</a> y volver a la consulta general.</h3>
+    <h3> {{'TEXT_GENERAL_A' | translate }}<a href="javascript:void(0)"
+            (click)="back()">{{'TEXT_GENERAL_B' | translate}}</a>{{'TEXT_GENERAL_C' | translate}} </h3>
 </ng-template>
 
 <div *ngIf="!showGrid;else gidHistry">
@@ -11,6 +12,7 @@
 <ng-template #gidHistry>
     <app-history-request [idUser]="userFind"></app-history-request>
     <div class="btn-r-ge">
-        <button type="button" (click)="back()" class="btn btn-primary btn-lg btn-block">Regresar</button>
+        <button type="button" (click)="back()" class="btn btn-primary btn-lg btn-block">
+            {{'BTN_GENERAL_BACK' | translate}} </button>
     </div>
 </ng-template>

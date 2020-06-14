@@ -1,23 +1,23 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Datos tomador</h5>
+        <h5 class="card-title"> {{ 'TEXT_TITLE_STEP_DATA_TITLE' | translate}}  </h5>
         <form [formGroup]="userDataFormGroup">
             <mat-form-field>
-                <mat-label>Cedula</mat-label>
+                <mat-label> {{ 'TEXT_TITLE_STEP_DATA_IDENT' | translate}}</mat-label>
                 <input [disabled]="true" matInput formControlName="id" placeholder="Número cedula" required>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Nombre</mat-label>
+                <mat-label> {{ 'TEXT_TITLE_STEP_DATA_NAME' | translate}}</mat-label>
                 <input [disabled]="true" matInput formControlName="name" placeholder="Nombre" required>
             </mat-form-field>
             <div>
                 <mat-form-field>
-                    <mat-label>Correo</mat-label>
+                    <mat-label> {{ 'TEXT_TITLE_STEP_DATA_EMAIL' | translate}}</mat-label>
                     <input [disabled]="true" matInput formControlName="email" placeholder="Correo" required>
                 </mat-form-field>
 
                 <mat-form-field>
-                    <mat-label>Fecha probable de pago.</mat-label>
+                    <mat-label> {{ 'TEXT_TITLE_STEP_DATA_DATE' | translate}}</mat-label>
                     <input matInput [matDatepicker]="picker" formControlName="datePay" (dateChange)="addEvent($event)" disabled>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker disabled="false"></mat-datepicker>
